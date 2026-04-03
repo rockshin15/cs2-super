@@ -19,15 +19,25 @@ def calcular_chance_duelo(atacante, defensor, vantagem_tatica: int = 0, peso_arm
 
 def simular_trocacao(atacante, defensor, vantagem_tatica: int = 0, peso_arma: int = 0):
     """Roda os dados para decidir quem vive e quem morre."""
-    chance_vitoria_atacante = calcular_chance_duelo(atacante, defensor, vantagem_tatica, peso_arma)
+    
+    # Puxa a vantagem da arma comprada na fase de economia
+    peso_atacante = getattr(atacante, 'vantagem_arma_atual', 0)
+    peso_defensor = getattr(defensor, 'vantagem_arma_atual', 0)
+    vantagem_armamento = peso_atacante - peso_defensor + peso_arma
+    
+    chance_vitoria_atacante = calcular_chance_duelo(atacante, defensor, vantagem_tatica, vantagem_armamento)
     
     dado = random.uniform(1.0, 100.0)
     
     if dado <= chance_vitoria_atacante:
+        if hasattr(atacante, 'economia'):
+            atacante.economia.adicionar_dinheiro(300) # Kill Reward
         return True, f"💥 {atacante.nickname} eliminou {defensor.nickname} com um belo tiro."
     else:
+        if hasattr(defensor, 'economia'):
+            defensor.economia.adicionar_dinheiro(300) # Kill Reward
         return False, f"🛡️ {defensor.nickname} segurou o ângulo e puniu o avanço de {atacante.nickname}."
-
+    
 def evento_de_utilitaria(suporte_atacante, defensor):
     """Simula o uso de granadas antes do duelo principal."""
     dado = random.randint(1, 100)

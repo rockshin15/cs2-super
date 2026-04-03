@@ -5,6 +5,7 @@ from textual.widgets import Header, Footer, TabbedContent, TabPane, Label, Butto
 from textual.containers import Vertical, Horizontal, Grid
 from data.database import DataManager
 from models.match_engine import RoundSimulator
+from models.economy import TeamState, PlayerEconomy, fase_de_compra, distribuir_recompensas
 
 # Componentes das Abas
 class DashboardTab(Vertical):
@@ -167,30 +168,77 @@ class MatchScreen(Screen):
         log_widget = self.query_one("#match_log", RichLog)
         table = self.query_one("#live_scoreboard", DataTable)
 
-        # 1. Puxar os times do banco de dados (Sua Equipe vs NAVI como exemplo)
         db = self.app.db
         id_do_seu_time = db.save_info["equipa_controlada_id"]
         seu_time = db.times.get(id_do_seu_time)
-        time_adversario = db.times.get("team_01") # NAVI
+        time_adversario = db.times.get("team_01")
 
         if not seu_time or not time_adversario:
             log_widget.write("[bold red]Erro: Equipas não encontradas no banco de dados![/]")
             return
 
-        # 2. Executar uma partida rápida de 13 rounds (MR12)
+        # 1. Inicializa o estado económico da partida para as equipas e jogadores
+        state_tr = TeamState(seu_time.nome)
+        state_ct = TeamState(time_adversario.nome)
+
+        for p in seu_time.elenco + time_adversario.elenco:
+            p.economia = PlayerEconomy()
+            p.vantagem_arma_atual = 0
+            p.sobreviveu_round_anterior = False
+
+        # 2. Executar uma partida rápida de 13 rounds
         for round_num in range(1, 14):
             log_widget.write(f"\n[bold yellow]=== Iniciando Round {round_num} ===[/]")
             
-            # Instancia o simulador com os elencos atuais
+            # FASE DE COMPRA
+            log_compra_tr = fase_de_compra(state_tr, seu_time.elenco)
+            log_compra_ct = fase_de_compra(state_ct, time_adversario.elenco)
+            log_widget.write(f"[italic gray]{log_compra_tr}[/]")
+            log_widget.write(f"[italic gray]{log_compra_ct}[/]")
+            await asyncio.sleep(1)
+
             simulador = RoundSimulator(seu_time.elenco, time_adversario.elenco)
             vencedor, logs_round = simulador.simular()
             
-            # Exibe os eventos reais do jogo passo a passo
             for linha in logs_round:
-                await asyncio.sleep(0.8) # Pausa dramática para imersão
+                await asyncio.sleep(0.8)
                 log_widget.write(f"-> {linha}")
 
+            # FIM DO ROUND E DISTRIBUIÇÃO DO DINHEIRO
+            log_eco = distribuir_recompensas(vencedor, state_tr, state_ct, seu_time.elenco, time_adversario.elenco, simulador.c4_plantada)
             log_widget.write(f"[bold green]Vitória da equipa {vencedor}[/]")
+            log_widget.write(f"[bold green]{log_eco}[/]")
+
+            # Regista quem sobreviveu para não voltar a gastar dinheiro com armas no próximo round
+            for sobrevivente in simulador.tr_vivos + simulador.ct_vivos:
+                sobrevivente.sobreviveu_round_anterior = True
+
+            # Atualiza o Placar com o dinheiro real que cada jogador tem no banco
+            table.clear()
+            for p in seu_time.elenco + time_adversario.elenco:
+                table.add_row(p.nickname, "-", "-", "-", f"${p.economia.dinheiro}")
+
+        log_widget.write("\n[bold magenta]=== FIM DE PARTIDA: EVOLUÇÃO DOS ATLETAS ===[/]")
+        import random
+        
+        for p in seu_time.elenco + time_adversario.elenco:
+            # Como ainda não temos as estatísticas reais (Kills/Mortes), 
+            # simulamos um rating aleatório baseado num multiplicador simples por agora
+            rating_provisorio = random.uniform(0.8, 1.3)
+            
+            mira_anterior = p.mira
+            tatico_anterior = p.gamesense
+            
+            p.ganhar_experiencia(rating_provisorio)
+            
+            # Avisa na interface apenas se houve uma evolução ou queda significativa (para não poluir)
+            if (p.mira - mira_anterior) > 0.05 or (p.gamesense - tatico_anterior) > 0.05:
+                log_widget.write(f"[green]📈 {p.nickname} evoluiu! (Mira: {p.mira} | Tático: {p.gamesense})[/]")
+            elif (p.mira - mira_anterior) < -0.05:
+                log_widget.write(f"[red]📉 A idade pesou para {p.nickname}. Reflexos diminuíram. (Mira: {p.mira})[/]")
+
+            log_widget.write("\n[bold cyan]Os jogadores envelheceram ligeiramente e estão mais fatigados.[/]")
+
             await asyncio.sleep(2)
 
 
