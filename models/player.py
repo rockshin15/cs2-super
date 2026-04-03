@@ -22,6 +22,7 @@ class Player:
     ego: float = 50.0
     personalidade: str = "Neutro"
     salario: int = 0
+    multa_rescisoria: int = 0  # ADICIONE ESTA LINHA
     moral: float = 80.0
     fadiga: float = 0.0
 

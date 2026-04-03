@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from typing import Optional
+from models.tournament import Tournament
 
 @dataclass
 class EventoCalendario:
@@ -46,3 +47,10 @@ class CalendarioGlobal:
                 else:
                     # Em dias normais (ou intervalos), a fadiga cai naturalmente se não houver jogos
                     p.fadiga = max(0.0, p.fadiga - 1.5)
+    
+    def inicializar_campeonato(self, nome_evento, todos_times):
+        """Cria uma instância real de torneio quando a data chega."""
+        times_lista = list(todos_times.values())
+        novo_torneio = Tournament(nome_evento, times_lista)
+        novo_torneio.gerar_chaveamento_inicial()
+        return novo_torneio
