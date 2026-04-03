@@ -4,6 +4,7 @@ from textual.screen import Screen
 from textual.widgets import Header, Footer, TabbedContent, TabPane, Label, Button, DataTable, Select, RadioSet, RadioButton, RichLog
 from textual.containers import Vertical, Horizontal, Grid
 from data.database import DataManager
+from models.match_engine import RoundSimulator
 
 # Componentes das Abas
 class DashboardTab(Vertical):
@@ -166,29 +167,31 @@ class MatchScreen(Screen):
         log_widget = self.query_one("#match_log", RichLog)
         table = self.query_one("#live_scoreboard", DataTable)
 
-        # Simulação temporária de 5 rounds para testarmos a interface
-        for round_num in range(1, 6):
+        # 1. Puxar os times do banco de dados (Sua Equipe vs NAVI como exemplo)
+        db = self.app.db
+        id_do_seu_time = db.save_info["equipa_controlada_id"]
+        seu_time = db.times.get(id_do_seu_time)
+        time_adversario = db.times.get("team_01") # NAVI
+
+        if not seu_time or not time_adversario:
+            log_widget.write("[bold red]Erro: Equipas não encontradas no banco de dados![/]")
+            return
+
+        # 2. Executar uma partida rápida de 13 rounds (MR12)
+        for round_num in range(1, 14):
             log_widget.write(f"\n[bold yellow]=== Iniciando Round {round_num} ===[/]")
             
-            # Textos provisórios simulando nossa engine
-            logs_exemplo = [
-                "TRs avançam para o Meio com utilitárias.",
-                "s1mple consegue uma kill de AWP na ligação!",
-                "Bomba plantada no site A.",
-                "CTs falham o retake."
-            ]
+            # Instancia o simulador com os elencos atuais
+            simulador = RoundSimulator(seu_time.elenco, time_adversario.elenco)
+            vencedor, logs_round = simulador.simular()
             
-            for linha in logs_exemplo:
-                await asyncio.sleep(0.8) # Pausa dramática entre eventos
+            # Exibe os eventos reais do jogo passo a passo
+            for linha in logs_round:
+                await asyncio.sleep(0.8) # Pausa dramática para imersão
                 log_widget.write(f"-> {linha}")
 
-            # Atualiza o Placar no fim do round
-            table.clear()
-            table.add_row("s1mple", str(round_num * 2), "1", "1.45", "$4500")
-            table.add_row("b1t", str(round_num), "3", "1.10", "$3200")
-            
-            log_widget.write(f"[bold green]Round {round_num} encerrado.[/]")
-            await asyncio.sleep(2) # Pausa maior antes do próximo round
+            log_widget.write(f"[bold green]Vitória da equipa {vencedor}[/]")
+            await asyncio.sleep(2)
 
 
 # Aplicativo Principal
