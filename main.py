@@ -7,6 +7,8 @@ from data.database import DataManager
 from models.match_engine import RoundSimulator
 from models.economy import TeamState, PlayerEconomy, fase_de_compra, distribuir_recompensas
 from models.stats import PlayerStats
+from models.calendar import CalendarioGlobal
+from models.veto import VetoSystem
 
 # Componentes das Abas
 class DashboardTab(Vertical):
@@ -178,6 +180,17 @@ class MatchScreen(Screen):
             log_widget.write("[bold red]Erro: Equipas não encontradas no banco de dados![/]")
             return
 
+        # --- NOVA FASE: PICK & BAN ---
+        sistema_veto = VetoSystem(seu_time, time_adversario)
+        mapa_jogado, logs_veto = sistema_veto.realizar_veto_bo1()
+        
+        for linha in logs_veto:
+            await asyncio.sleep(0.6) # Dá um tempinho para lermos cada ban
+            log_widget.write(linha)
+            
+        await asyncio.sleep(1.5) # Pausa dramática antes do jogo começar
+        # -----------------------------
+
         # 1. Inicializa o estado económico e estatístico da partida
         state_tr = TeamState(seu_time.nome)
         state_ct = TeamState(time_adversario.nome)
@@ -285,11 +298,37 @@ class CSManagerApp(App):
         # O __init__ garante que o banco de dados seja carregado ANTES da interface existir
         self.db = DataManager()
         self.db.carregar_jogo()
+        self.calendario = CalendarioGlobal() # <- Injetamos o Calendário aqui
+
+    def atualizar_dashboard(self) -> None:
+        try:
+            dia_atual = self.db.save_info["dia_atual"]
+            evento = self.calendario.obter_evento_do_dia(dia_atual)
+            
+            # Atualiza a Label principal do Dashboard
+            lbl_evento = self.query_one("#next_match", Label)
+            if evento:
+                lbl_evento.update(f"📅 Dia {dia_atual} | Evento Atual: {evento.nome} ({evento.tipo})")
+            else:
+                lbl_evento.update(f"📅 Dia {dia_atual} | Treino Regular na Base")
+                
+            # Calcula e atualiza a média de fadiga e moral da SUA equipa
+            id_do_seu_time = self.db.save_info["equipa_controlada_id"]
+            seu_time = self.db.times.get(id_do_seu_time)
+            
+            if seu_time and seu_time.elenco:
+                media_fadiga = sum(p.fadiga for p in seu_time.elenco) / len(seu_time.elenco)
+                media_moral = sum(p.moral for p in seu_time.elenco) / len(seu_time.elenco)
+                
+                lbl_status = self.query_one("#team_status", Label)
+                lbl_status.update(f"📊 Estado da Equipa: Moral {media_moral:.1f} | Fadiga Média: {media_fadiga:.1f}%")
+        except Exception:
+            pass # Ignora se a interface ainda estiver a carregar
 
     def on_mount(self) -> None:
-        """Dispara notificações quando a interface termina de carregar."""
         nome_treinador = self.db.save_info.get("manager_nome", "Treinador")
         self.notify(f"Bem-vindo de volta, {nome_treinador}!", title="Save Carregado")
+        self.atualizar_dashboard() # Pinta o ecrã com o dia correto ao abrir o jogo
 
     def compose(self) -> ComposeResult:
         yield Header(show_clock=True)
@@ -311,8 +350,23 @@ class CSManagerApp(App):
     # ... (Seus eventos continuam aqui embaixo)
     # Ações e Eventos
     def action_advance_day(self) -> None:
-        """Ação ativada ao apertar Espaço ou o botão."""
-        self.notify("Um dia se passou...", title="Tempo Avançado")
+        """Ação ativada ao apertar Espaço ou o botão de Avançar Dia."""
+        db = self.db
+        dia_atual = db.save_info["dia_atual"]
+        
+        # 1. Aplica o RPG e Física (Cansaço, Treino de Bootcamp, Descanso)
+        self.calendario.processar_efeitos_do_dia(dia_atual, db.times)
+        
+        # 2. O Tempo avança
+        db.save_info["dia_atual"] += 1
+        novo_dia = db.save_info["dia_atual"]
+        
+        # 3. Atualiza as Labels do Ecrã
+        self.atualizar_dashboard()
+        
+        evento_novo = self.calendario.obter_evento_do_dia(novo_dia)
+        nome_evento = evento_novo.nome if evento_novo else "Dia Normal"
+        self.notify(f"A avançar para o Dia {novo_dia}...", title=nome_evento)
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         """Captura os cliques em botões."""
