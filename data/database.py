@@ -31,6 +31,7 @@ class DataManager:
         for p_id, p_data in iterador_jogadores:
             # Usa .get() para evitar erros se faltar alguma chave no JSON antigo
             attrs = p_data.get("atributos", p_data)
+            ocultos = p_data.get("ocultos", p_data)
             contrato = p_data.get("contrato", {})
             status = p_data.get("status", {})
 
@@ -39,12 +40,12 @@ class DataManager:
                 nome=p_data.get("nome", "Desconhecido"),
                 nickname=p_data.get("nickname", "Player"),
                 idade=p_data.get("idade", 20.0),
-                funcao_principal=p_data.get("funcao_principal", "Rifler"),
+                funcao_principal=p_data.get("funcao_principal", p_data.get("funcao", "Rifler")),
                 mira=attrs.get("mira", 50.0),
                 gamesense=attrs.get("gamesense", 50.0),
                 clutch=attrs.get("clutch", 50.0),
-                potencial=attrs.get("potencial", 70.0),
-                profissionalismo=attrs.get("profissionalismo", 50.0),
+                potencial=ocultos.get("potencial", 70.0),
+                profissionalismo=ocultos.get("profissionalismo", 50.0),
                 team_id=p_data.get("team_id", ""),
                 ego=attrs.get("ego", 50.0),
                 personalidade=p_data.get("personalidade", "Neutro"),

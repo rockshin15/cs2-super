@@ -33,6 +33,12 @@ class CalendarioGlobal:
         """Aplica fadiga, treino ou descanso aos elencos dependendo do calendário."""
         evento = self.obter_evento_do_dia(dia_atual)
         
+        # Pagamento de salários no dia 30 de cada mês
+        if dia_atual % 30 == 0:
+            for time in times.values():
+                folha_salarial = sum(p.salario for p in time.elenco)
+                time.saldo -= folha_salarial
+                
         for time in times.values():
             for p in time.elenco:
                 if evento and evento.tipo == "Ferias":
@@ -47,7 +53,7 @@ class CalendarioGlobal:
                 else:
                     # Em dias normais (ou intervalos), a fadiga cai naturalmente se não houver jogos
                     p.fadiga = max(0.0, p.fadiga - 1.5)
-    
+        
     def inicializar_campeonato(self, nome_evento, todos_times):
         """Cria uma instância real de torneio quando a data chega."""
         times_lista = list(todos_times.values())

@@ -432,31 +432,27 @@ class CSManagerApp(App):
 
             self.notify(f"{jogador.nickname} contratado com sucesso!", title="Transferência Concluída")
             self.atualizar_dashboard() # Para atualizar o saldo visível
+            self.db.salvar_jogo() # <--- SALVE AQUI
         else:
             self.notify("Saldo insuficiente para pagar a cláusula!", title="Erro", variant="error")
-
-        if sucesso:
-            self.db.salvar_jogo() # <--- SALVAR APÓS CONTRATAR
-            self.notify(f"{jogador.nickname} contratado!", title="Mercado")
     
     # Atualize também o ClubTab para mostrar o saldo real
     def atualizar_dashboard(self) -> None:
-        # ... lógica anterior ...
-        id_seu_time = self.db.save_info["equipa_controlada_id"]
-        seu_time = self.db.times.get(id_seu_time)
-        
-        # Se tiver uma Label de finanças, atualize-a aqui
         try:
-            self.query_one("#finances", Label).update(f"Saldo em Caixa: $ {seu_time.saldo:,}")
-        except:
-            pass
-        
-    def atualizar_dashboard(self) -> None:
-        try:
-            dia_atual = self.db.save_info["dia_atual"]
-            evento = self.calendario.obter_evento_do_dia(dia_atual)
+            db = self.db
+            id_seu_time = db.save_info["equipa_controlada_id"]
+            seu_time = db.times.get(id_seu_time)
             
-            # Atualiza a Label principal do Dashboard
+            # 1. Atualiza Finanças
+            if seu_time:
+                try:
+                    self.query_one("#finances", Label).update(f"Saldo em Caixa: $ {seu_time.saldo:,}")
+                except Exception:
+                    pass
+
+            # 2. Atualiza Calendário e Status
+            dia_atual = db.save_info["dia_atual"]
+            evento = self.calendario.obter_evento_do_dia(dia_atual)
             lbl_evento = self.query_one("#next_match", Label)
             if evento:
                 lbl_evento.update(f"📅 Dia {dia_atual} | Evento Atual: {evento.nome} ({evento.tipo})")

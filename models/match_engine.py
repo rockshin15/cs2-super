@@ -143,7 +143,8 @@ class RoundSimulator:
 
                 mod, log_u = evento_de_utilitaria(tr, ct)
                 if mod != 0:
-                    if mod > 0: tr.estatisticas.dano_causado += mod # Granadas afetam o ADR
+                    if mod > 0 and log_u.startswith("🔥"): # Só contabiliza dano se for fogo/HE
+                        tr.estatisticas.dano_causado += mod 
                     self.adicionar_log(log_u)
 
                 self.processar_duelo_com_trade(tr, ct)
