@@ -6,6 +6,7 @@ from textual.containers import Vertical, Horizontal, Grid
 from data.database import DataManager
 from models.match_engine import RoundSimulator
 from models.economy import TeamState, PlayerEconomy, fase_de_compra, distribuir_recompensas
+from models.stats import PlayerStats
 
 # Componentes das Abas
 class DashboardTab(Vertical):
@@ -177,12 +178,13 @@ class MatchScreen(Screen):
             log_widget.write("[bold red]Erro: Equipas não encontradas no banco de dados![/]")
             return
 
-        # 1. Inicializa o estado económico da partida para as equipas e jogadores
+        # 1. Inicializa o estado económico e estatístico da partida
         state_tr = TeamState(seu_time.nome)
         state_ct = TeamState(time_adversario.nome)
 
         for p in seu_time.elenco + time_adversario.elenco:
             p.economia = PlayerEconomy()
+            p.estatisticas = PlayerStats()  # Adiciona os stats em branco
             p.vantagem_arma_atual = 0
             p.sobreviveu_round_anterior = False
 
@@ -216,31 +218,30 @@ class MatchScreen(Screen):
             # Atualiza o Placar com o dinheiro real que cada jogador tem no banco
             table.clear()
             for p in seu_time.elenco + time_adversario.elenco:
-                table.add_row(p.nickname, "-", "-", "-", f"${p.economia.dinheiro}")
+                rating_atual = p.estatisticas.calcular_rating()
+                linha_kda = f"{p.estatisticas.kills} / {p.estatisticas.deaths}"
+                table.add_row(p.nickname, linha_kda, f"{p.estatisticas.get_adr()} ADR", f"{rating_atual} RTG", f"${p.economia.dinheiro}")
 
+            await asyncio.sleep(2)
+
+        # --- FIM DE JOGO: EVOLUÇÃO E RPG ---
         log_widget.write("\n[bold magenta]=== FIM DE PARTIDA: EVOLUÇÃO DOS ATLETAS ===[/]")
-        import random
         
         for p in seu_time.elenco + time_adversario.elenco:
-            # Como ainda não temos as estatísticas reais (Kills/Mortes), 
-            # simulamos um rating aleatório baseado num multiplicador simples por agora
-            rating_provisorio = random.uniform(0.8, 1.3)
+            # Puxa o Rating REAL de acordo com as kills/mortes do jogo!
+            rating_real = p.estatisticas.calcular_rating()
             
             mira_anterior = p.mira
             tatico_anterior = p.gamesense
             
-            p.ganhar_experiencia(rating_provisorio)
+            p.ganhar_experiencia(rating_real)
             
-            # Avisa na interface apenas se houve uma evolução ou queda significativa (para não poluir)
             if (p.mira - mira_anterior) > 0.05 or (p.gamesense - tatico_anterior) > 0.05:
-                log_widget.write(f"[green]📈 {p.nickname} evoluiu! (Mira: {p.mira} | Tático: {p.gamesense})[/]")
+                log_widget.write(f"[green]📈 {p.nickname} ({rating_real} Rating) evoluiu! (Mira: {p.mira} | Tático: {p.gamesense})[/]")
             elif (p.mira - mira_anterior) < -0.05:
                 log_widget.write(f"[red]📉 A idade pesou para {p.nickname}. Reflexos diminuíram. (Mira: {p.mira})[/]")
 
-            log_widget.write("\n[bold cyan]Os jogadores envelheceram ligeiramente e estão mais fatigados.[/]")
-
-            await asyncio.sleep(2)
-
+        log_widget.write("\n[bold cyan]Os jogadores envelheceram ligeiramente e estão mais fatigados.[/]")
 
 # Aplicativo Principal
 class CSManagerApp(App):
