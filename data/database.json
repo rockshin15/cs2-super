@@ -2,2083 +2,1849 @@
     "save_info": {
         "manager_nome": "Treinador",
         "equipa_controlada_id": "team_06",
-        "dia_atual": 1,
+        "dia_atual": 15,
         "versao_db": "1.0"
     },
-    "times": [
-        {
+    "times": {
+        "team_01": {
             "id": "team_01",
             "nome": "NAVI",
-            "reputacao": 98,
-            "financas": {
-                "saldo": 1189326,
-                "orcamento_transferencias": 500000
-            },
+            "saldo": 0,
             "taticas": {
                 "ritmo_tr": "default",
                 "postura_ct": "balanced",
                 "permaban": "Anubis"
-            }
+            },
+            "elenco": []
         },
-        {
+        "team_02": {
             "id": "team_02",
             "nome": "Faze Clan",
-            "reputacao": 97,
-            "financas": {
-                "saldo": 2285999,
-                "orcamento_transferencias": 500000
-            },
+            "saldo": 0,
             "taticas": {
                 "ritmo_tr": "default",
                 "postura_ct": "balanced",
                 "permaban": "Mirage"
-            }
+            },
+            "elenco": []
         },
-        {
+        "team_03": {
             "id": "team_03",
             "nome": "Vitality",
-            "reputacao": 87,
-            "financas": {
-                "saldo": 2606412,
-                "orcamento_transferencias": 500000
-            },
+            "saldo": 0,
             "taticas": {
                 "ritmo_tr": "default",
                 "postura_ct": "balanced",
                 "permaban": "Vertigo"
-            }
+            },
+            "elenco": []
         },
-        {
+        "team_04": {
             "id": "team_04",
             "nome": "G2 Esports",
-            "reputacao": 74,
-            "financas": {
-                "saldo": 2696293,
-                "orcamento_transferencias": 500000
-            },
+            "saldo": 0,
             "taticas": {
                 "ritmo_tr": "default",
                 "postura_ct": "balanced",
                 "permaban": "Vertigo"
-            }
+            },
+            "elenco": []
         },
-        {
+        "team_05": {
             "id": "team_05",
             "nome": "MOUZ",
-            "reputacao": 73,
-            "financas": {
-                "saldo": 1550775,
-                "orcamento_transferencias": 500000
-            },
+            "saldo": 0,
             "taticas": {
                 "ritmo_tr": "default",
                 "postura_ct": "balanced",
                 "permaban": "Vertigo"
-            }
+            },
+            "elenco": []
         },
-        {
+        "team_06": {
             "id": "team_06",
             "nome": "Sua Equipe",
-            "reputacao": 50,
-            "financas": {
-                "saldo": 500000,
-                "orcamento_transferencias": 500000
-            },
+            "saldo": 0,
             "taticas": {
                 "ritmo_tr": "default",
                 "postura_ct": "balanced",
                 "permaban": "Vertigo"
-            }
+            },
+            "elenco": []
         },
-        {
+        "team_07": {
             "id": "team_07",
             "nome": "Liquid",
-            "reputacao": 72,
-            "financas": {
-                "saldo": 2322645,
-                "orcamento_transferencias": 500000
-            },
+            "saldo": 0,
             "taticas": {
                 "ritmo_tr": "default",
                 "postura_ct": "balanced",
                 "permaban": "Mirage"
-            }
+            },
+            "elenco": []
         },
-        {
+        "team_08": {
             "id": "team_08",
             "nome": "Cloud9",
-            "reputacao": 94,
-            "financas": {
-                "saldo": 2004108,
-                "orcamento_transferencias": 500000
-            },
+            "saldo": 0,
             "taticas": {
                 "ritmo_tr": "default",
                 "postura_ct": "balanced",
                 "permaban": "Vertigo"
-            }
+            },
+            "elenco": []
         }
-    ],
-    "jogadores": [
-        {
+    },
+    "jogadores": {
+        "ply_001": {
             "id": "ply_001",
-            "team_id": "team_01",
             "nome": "Jonathan 'Darkis' Van Dulken",
             "nickname": "Darkis",
             "idade": 27.2,
-            "funcao": "IGL",
+            "funcao_principal": "Rifler",
+            "team_id": "team_01",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 95.6,
                 "gamesense": 86.0,
-                "clutch": 70.7
-            },
-            "ocultos": {
-                "potencial": 96.3,
-                "profissionalismo": 48.5,
-                "ego": 26.5,
-                "personalidade": "Profissional"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 70.7,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 12617,
-                "multa_rescisoria": 630850,
-                "meses_restantes": 24
+                "multa_rescisoria": 630850
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_002": {
             "id": "ply_002",
-            "team_id": "team_01",
             "nome": "Mathieu 'Dark1' Guipouy",
             "nickname": "Dark1",
             "idade": 20.5,
-            "funcao": "AWPer",
+            "funcao_principal": "Rifler",
+            "team_id": "team_01",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 84.3,
                 "gamesense": 95.1,
-                "clutch": 71.6
-            },
-            "ocultos": {
-                "potencial": 93.1,
-                "profissionalismo": 98.9,
-                "ego": 31.1,
-                "personalidade": "Temperamental"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 71.6,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 18829,
-                "multa_rescisoria": 941450,
-                "meses_restantes": 7
+                "multa_rescisoria": 941450
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_003": {
             "id": "ply_003",
-            "team_id": "team_01",
             "nome": "Nicholas 'Godshot' Jablonowski",
             "nickname": "Godshot",
             "idade": 29.3,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "team_01",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 78.1,
                 "gamesense": 80.8,
-                "clutch": 75.0
-            },
-            "ocultos": {
-                "potencial": 83.8,
-                "profissionalismo": 68.5,
-                "ego": 22.9,
-                "personalidade": "Lider"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 75.0,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 11699,
-                "multa_rescisoria": 584950,
-                "meses_restantes": 11
+                "multa_rescisoria": 584950
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_004": {
             "id": "ply_004",
-            "team_id": "team_01",
             "nome": "Robin 'Xshot' Rönnquist",
             "nickname": "Xshot",
             "idade": 22.7,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "team_01",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 100.0,
                 "gamesense": 57.2,
-                "clutch": 87.0
-            },
-            "ocultos": {
-                "potencial": 100.0,
-                "profissionalismo": 38.1,
-                "ego": 65.0,
-                "personalidade": "Temperamental"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 87.0,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 12211,
-                "multa_rescisoria": 610550,
-                "meses_restantes": 19
+                "multa_rescisoria": 610550
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_005": {
             "id": "ply_005",
-            "team_id": "team_01",
             "nome": "Robin 'Xshot' Rönnquist",
             "nickname": "Xshot",
             "idade": 18.5,
-            "funcao": "Anchor",
+            "funcao_principal": "Rifler",
+            "team_id": "team_01",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 85.5,
                 "gamesense": 89.1,
-                "clutch": 81.9
-            },
-            "ocultos": {
-                "potencial": 95.2,
-                "profissionalismo": 87.4,
-                "ego": 61.9,
-                "personalidade": "Temperamental"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 81.9,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 19234,
-                "multa_rescisoria": 961700,
-                "meses_restantes": 14
+                "multa_rescisoria": 961700
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_006": {
             "id": "ply_006",
-            "team_id": "team_02",
             "nome": "Lukas 'Sniper' Rossander",
             "nickname": "Sniper",
             "idade": 26.0,
-            "funcao": "IGL",
+            "funcao_principal": "Rifler",
+            "team_id": "team_02",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 67.8,
                 "gamesense": 95.2,
-                "clutch": 77.8
+                "clutch": 77.8,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
-            "ocultos": {
-                "potencial": 96.9,
-                "profissionalismo": 83.3,
-                "ego": 45.0,
-                "personalidade": "Solitário"
+            "contrato": {
+                "salario": 12040,
+                "multa_rescisoria": 602000
             },
             "status": {
                 "moral": 80.0,
                 "fadiga": 0.0
-            },
-            "contrato": {
-                "salario": 12040,
-                "multa_rescisoria": 602000,
-                "meses_restantes": 23
             }
         },
-        {
+        "ply_007": {
             "id": "ply_007",
-            "team_id": "team_02",
             "nome": "Nathan 'Neo' Guipouy",
             "nickname": "Neo",
             "idade": 28.7,
-            "funcao": "AWPer",
+            "funcao_principal": "Rifler",
+            "team_id": "team_02",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 85.5,
                 "gamesense": 76.6,
-                "clutch": 88.6
-            },
-            "ocultos": {
-                "potencial": 90.1,
-                "profissionalismo": 57.7,
-                "ego": 32.4,
-                "personalidade": "Solitário"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 88.6,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 12538,
-                "multa_rescisoria": 626900,
-                "meses_restantes": 10
+                "multa_rescisoria": 626900
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_008": {
             "id": "ply_008",
-            "team_id": "team_02",
             "nome": "Timothy 'Cold' Van Dulken",
             "nickname": "Cold",
             "idade": 18.8,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "team_02",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 72.6,
                 "gamesense": 92.3,
-                "clutch": 68.9
-            },
-            "ocultos": {
-                "potencial": 100.0,
-                "profissionalismo": 56.4,
-                "ego": 30.6,
-                "personalidade": "Lider"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 68.9,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 17536,
-                "multa_rescisoria": 876800,
-                "meses_restantes": 11
+                "multa_rescisoria": 876800
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_009": {
             "id": "ply_009",
-            "team_id": "team_02",
             "nome": "Ludvig 'X1' Brolin",
             "nickname": "X1",
             "idade": 30.1,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "team_02",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 91.4,
                 "gamesense": 76.8,
-                "clutch": 100.0
-            },
-            "ocultos": {
-                "potencial": 100.0,
-                "profissionalismo": 59.5,
-                "ego": 88.6,
-                "personalidade": "Solitário"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 100.0,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 13407,
-                "multa_rescisoria": 670350,
-                "meses_restantes": 18
+                "multa_rescisoria": 670350
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_010": {
             "id": "ply_010",
-            "team_id": "team_02",
             "nome": "Peter 'Godzera' Møller",
             "nickname": "Godzera",
             "idade": 19.6,
-            "funcao": "Anchor",
+            "funcao_principal": "Rifler",
+            "team_id": "team_02",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 83.9,
                 "gamesense": 99.4,
-                "clutch": 68.8
-            },
-            "ocultos": {
-                "potencial": 100.0,
-                "profissionalismo": 66.6,
-                "ego": 10.7,
-                "personalidade": "Lider"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 68.8,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 18916,
-                "multa_rescisoria": 945800,
-                "meses_restantes": 8
+                "multa_rescisoria": 945800
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_011": {
             "id": "ply_011",
-            "team_id": "team_03",
             "nome": "Danylo 'Zzera' Kostyliev",
             "nickname": "Zzera",
             "idade": 20.5,
-            "funcao": "IGL",
+            "funcao_principal": "Rifler",
+            "team_id": "team_03",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 92.1,
                 "gamesense": 75.1,
-                "clutch": 84.4
-            },
-            "ocultos": {
-                "potencial": 92.1,
-                "profissionalismo": 79.9,
-                "ego": 73.5,
-                "personalidade": "Profissional"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 84.4,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 18865,
-                "multa_rescisoria": 943250,
-                "meses_restantes": 14
+                "multa_rescisoria": 943250
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_012": {
             "id": "ply_012",
-            "team_id": "team_03",
             "nome": "Dan 'Darker' Madesclaire",
             "nickname": "Darker",
             "idade": 17.5,
-            "funcao": "AWPer",
+            "funcao_principal": "Rifler",
+            "team_id": "team_03",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 90.6,
                 "gamesense": 80.8,
-                "clutch": 80.7
-            },
-            "ocultos": {
-                "potencial": 100.0,
-                "profissionalismo": 51.8,
-                "ego": 73.2,
-                "personalidade": "Estrela"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 80.7,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 18910,
-                "multa_rescisoria": 945500,
-                "meses_restantes": 22
+                "multa_rescisoria": 945500
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_013": {
             "id": "ply_013",
-            "team_id": "team_03",
             "nome": "Dan 'V' Madesclaire",
             "nickname": "V",
             "idade": 26.1,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "team_03",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 82.4,
                 "gamesense": 81.0,
-                "clutch": 90.1
-            },
-            "ocultos": {
-                "potencial": 92.8,
-                "profissionalismo": 79.9,
-                "ego": 65.2,
-                "personalidade": "Temperamental"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 90.1,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 12676,
-                "multa_rescisoria": 633800,
-                "meses_restantes": 23
+                "multa_rescisoria": 633800
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_014": {
             "id": "ply_014",
-            "team_id": "team_03",
             "nome": "Olof 'Goder' Kajbjer",
             "nickname": "Goder",
             "idade": 25.4,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "team_03",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 86.2,
                 "gamesense": 86.0,
-                "clutch": 71.1
-            },
-            "ocultos": {
-                "potencial": 88.4,
-                "profissionalismo": 73.6,
-                "ego": 71.9,
-                "personalidade": "Profissional"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 71.1,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 12168,
-                "multa_rescisoria": 608400,
-                "meses_restantes": 20
+                "multa_rescisoria": 608400
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_015": {
             "id": "ply_015",
-            "team_id": "team_03",
             "nome": "Russel 'Zis' Van Dulken",
             "nickname": "Zis",
             "idade": 16.6,
-            "funcao": "Anchor",
+            "funcao_principal": "Rifler",
+            "team_id": "team_03",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 82.9,
                 "gamesense": 90.5,
-                "clutch": 67.4
-            },
-            "ocultos": {
-                "potencial": 82.9,
-                "profissionalismo": 57.6,
-                "ego": 28.4,
-                "personalidade": "Estrela"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 67.4,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 12040,
-                "multa_rescisoria": 602000,
-                "meses_restantes": 6
+                "multa_rescisoria": 602000
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_016": {
             "id": "ply_016",
-            "team_id": "team_04",
             "nome": "Cédric 'Zzera' Herbaut",
             "nickname": "Zzera",
             "idade": 24.7,
-            "funcao": "IGL",
+            "funcao_principal": "Rifler",
+            "team_id": "team_04",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 55.8,
                 "gamesense": 57.4,
-                "clutch": 58.5
-            },
-            "ocultos": {
-                "potencial": 72.5,
-                "profissionalismo": 59.0,
-                "ego": 60.0,
-                "personalidade": "Profissional"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 58.5,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 8588,
-                "multa_rescisoria": 429400,
-                "meses_restantes": 12
+                "multa_rescisoria": 429400
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_017": {
             "id": "ply_017",
-            "team_id": "team_04",
             "nome": "Nicolai 'K' Larsen",
             "nickname": "K",
             "idade": 22.6,
-            "funcao": "AWPer",
+            "funcao_principal": "Rifler",
+            "team_id": "team_04",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 73.9,
                 "gamesense": 81.6,
-                "clutch": 59.8
-            },
-            "ocultos": {
-                "potencial": 73.9,
-                "profissionalismo": 83.3,
-                "ego": 47.2,
-                "personalidade": "Temperamental"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 59.8,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 10761,
-                "multa_rescisoria": 538050,
-                "meses_restantes": 13
+                "multa_rescisoria": 538050
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_018": {
             "id": "ply_018",
-            "team_id": "team_04",
             "nome": "Andrei 'Neoy' Costa",
             "nickname": "Neoy",
             "idade": 30.5,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "team_04",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 50.1,
                 "gamesense": 74.0,
-                "clutch": 45.0
-            },
-            "ocultos": {
-                "potencial": 76.2,
-                "profissionalismo": 60.1,
-                "ego": 62.0,
-                "personalidade": "Lider"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 45.0,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 8455,
-                "multa_rescisoria": 422750,
-                "meses_restantes": 16
+                "multa_rescisoria": 422750
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_019": {
             "id": "ply_019",
-            "team_id": "team_04",
             "nome": "Kristian 'Godshot' Møller",
             "nickname": "Godshot",
             "idade": 23.3,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "team_04",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 50.3,
                 "gamesense": 53.1,
-                "clutch": 69.4
-            },
-            "ocultos": {
-                "potencial": 73.8,
-                "profissionalismo": 74.2,
-                "ego": 96.8,
-                "personalidade": "Solitário"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 69.4,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 8638,
-                "multa_rescisoria": 431900,
-                "meses_restantes": 23
+                "multa_rescisoria": 431900
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_020": {
             "id": "ply_020",
-            "team_id": "team_04",
             "nome": "Emil 'Godx' Reedtz",
             "nickname": "Godx",
             "idade": 28.0,
-            "funcao": "Anchor",
+            "funcao_principal": "Rifler",
+            "team_id": "team_04",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 71.3,
                 "gamesense": 54.1,
-                "clutch": 66.6
-            },
-            "ocultos": {
-                "potencial": 73.8,
-                "profissionalismo": 54.5,
-                "ego": 63.3,
-                "personalidade": "Profissional"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 66.6,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 9598,
-                "multa_rescisoria": 479900,
-                "meses_restantes": 24
+                "multa_rescisoria": 479900
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_021": {
             "id": "ply_021",
-            "team_id": "team_05",
             "nome": "Peter 'Goder' Larsen",
             "nickname": "Goder",
             "idade": 28.7,
-            "funcao": "IGL",
+            "funcao_principal": "Rifler",
+            "team_id": "team_05",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 80.7,
                 "gamesense": 54.7,
-                "clutch": 65.4
-            },
-            "ocultos": {
-                "potencial": 80.8,
-                "profissionalismo": 66.0,
-                "ego": 53.6,
-                "personalidade": "Temperamental"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 65.4,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 10038,
-                "multa_rescisoria": 501900,
-                "meses_restantes": 10
+                "multa_rescisoria": 501900
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_022": {
             "id": "ply_022",
-            "team_id": "team_05",
             "nome": "Casper 'K' Reedtz",
             "nickname": "K",
             "idade": 28.1,
-            "funcao": "AWPer",
+            "funcao_principal": "Rifler",
+            "team_id": "team_05",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 56.5,
                 "gamesense": 65.6,
-                "clutch": 46.0
-            },
-            "ocultos": {
-                "potencial": 68.0,
-                "profissionalismo": 67.8,
-                "ego": 32.8,
-                "personalidade": "Estrela"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 46.0,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 8406,
-                "multa_rescisoria": 420300,
-                "meses_restantes": 23
+                "multa_rescisoria": 420300
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_023": {
             "id": "ply_023",
-            "team_id": "team_05",
             "nome": "Nicolai 'Vis' Møller",
             "nickname": "Vis",
             "idade": 27.2,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "team_05",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 80.5,
                 "gamesense": 57.2,
-                "clutch": 64.3
-            },
-            "ocultos": {
-                "potencial": 82.0,
-                "profissionalismo": 89.8,
-                "ego": 67.8,
-                "personalidade": "Solitário"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 64.3,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 10098,
-                "multa_rescisoria": 504900,
-                "meses_restantes": 13
+                "multa_rescisoria": 504900
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_024": {
             "id": "ply_024",
-            "team_id": "team_05",
             "nome": "Jake 'God1' Ta",
             "nickname": "God1",
             "idade": 26.1,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "team_05",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 64.3,
                 "gamesense": 85.5,
-                "clutch": 64.8
-            },
-            "ocultos": {
-                "potencial": 86.8,
-                "profissionalismo": 52.8,
-                "ego": 35.9,
-                "personalidade": "Solitário"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 64.8,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 10733,
-                "multa_rescisoria": 536650,
-                "meses_restantes": 6
+                "multa_rescisoria": 536650
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_025": {
             "id": "ply_025",
-            "team_id": "team_05",
             "nome": "Mathieu 'Kshot' Papillon",
             "nickname": "Kshot",
             "idade": 25.0,
-            "funcao": "Anchor",
+            "funcao_principal": "Rifler",
+            "team_id": "team_05",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 55.3,
                 "gamesense": 67.8,
-                "clutch": 46.1
-            },
-            "ocultos": {
-                "potencial": 68.9,
-                "profissionalismo": 77.8,
-                "ego": 56.8,
-                "personalidade": "Profissional"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 46.1,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 8459,
-                "multa_rescisoria": 422950,
-                "meses_restantes": 12
+                "multa_rescisoria": 422950
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_026": {
             "id": "ply_026",
-            "team_id": "team_06",
             "nome": "Marcelo 'Neoking' Cerato",
             "nickname": "Neoking",
             "idade": 19.0,
-            "funcao": "IGL",
+            "funcao_principal": "Rifler",
+            "team_id": "team_06",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 70.5,
                 "gamesense": 47.5,
-                "clutch": 29.8
-            },
-            "ocultos": {
-                "potencial": 70.5,
-                "profissionalismo": 53.5,
-                "ego": 79.0,
-                "personalidade": "Profissional"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 29.8,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 7384,
-                "multa_rescisoria": 369200,
-                "meses_restantes": 10
+                "multa_rescisoria": 369200
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_027": {
             "id": "ply_027",
-            "team_id": "team_06",
             "nome": "Kaike 'Darkshot' Piovezan",
             "nickname": "Darkshot",
             "idade": 28.1,
-            "funcao": "AWPer",
+            "funcao_principal": "Rifler",
+            "team_id": "team_06",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 50.1,
                 "gamesense": 43.3,
-                "clutch": 36.4
-            },
-            "ocultos": {
-                "potencial": 50.5,
-                "profissionalismo": 57.2,
-                "ego": 58.8,
-                "personalidade": "Lider"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 36.4,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 6489,
-                "multa_rescisoria": 324450,
-                "meses_restantes": 21
+                "multa_rescisoria": 324450
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_028": {
             "id": "ply_028",
-            "team_id": "team_06",
             "nome": "Marcelo 'Dark1' Costa",
             "nickname": "Dark1",
             "idade": 30.8,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "team_06",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 51.8,
                 "gamesense": 51.0,
-                "clutch": 37.4
-            },
-            "ocultos": {
-                "potencial": 53.1,
-                "profissionalismo": 65.7,
-                "ego": 75.1,
-                "personalidade": "Lider"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 37.4,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 7013,
-                "multa_rescisoria": 350650,
-                "meses_restantes": 20
+                "multa_rescisoria": 350650
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_029": {
             "id": "ply_029",
-            "team_id": "team_06",
             "nome": "Marcelo 'Xking' Piovezan",
             "nickname": "Xking",
             "idade": 19.6,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "team_06",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 38.4,
                 "gamesense": 44.6,
-                "clutch": 31.4
-            },
-            "ocultos": {
-                "potencial": 56.7,
-                "profissionalismo": 78.0,
-                "ego": 69.4,
-                "personalidade": "Lider"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 31.4,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 5724,
-                "multa_rescisoria": 286200,
-                "meses_restantes": 16
+                "multa_rescisoria": 286200
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_030": {
             "id": "ply_030",
-            "team_id": "team_06",
             "nome": "Gabriel 'Dark' Toledo",
             "nickname": "Dark",
             "idade": 22.1,
-            "funcao": "Anchor",
+            "funcao_principal": "Rifler",
+            "team_id": "team_06",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 53.5,
                 "gamesense": 40.7,
-                "clutch": 36.6
-            },
-            "ocultos": {
-                "potencial": 53.5,
-                "profissionalismo": 45.9,
-                "ego": 75.1,
-                "personalidade": "Profissional"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 36.6,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 6537,
-                "multa_rescisoria": 326850,
-                "meses_restantes": 17
+                "multa_rescisoria": 326850
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_031": {
             "id": "ply_031",
-            "team_id": "team_07",
             "nome": "Mathieu 'Snipking' Schrub",
             "nickname": "Snipking",
             "idade": 32.0,
-            "funcao": "IGL",
+            "funcao_principal": "Rifler",
+            "team_id": "team_07",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 48.5,
                 "gamesense": 87.9,
-                "clutch": 63.9
-            },
-            "ocultos": {
-                "potencial": 90.0,
-                "profissionalismo": 83.1,
-                "ego": 80.8,
-                "personalidade": "Lider"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 63.9,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 10020,
-                "multa_rescisoria": 501000,
-                "meses_restantes": 14
+                "multa_rescisoria": 501000
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_032": {
             "id": "ply_032",
-            "team_id": "team_07",
             "nome": "Jake 'K' Cannella",
             "nickname": "K",
             "idade": 18.7,
-            "funcao": "AWPer",
+            "funcao_principal": "Rifler",
+            "team_id": "team_07",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 77.2,
                 "gamesense": 73.5,
-                "clutch": 68.1
-            },
-            "ocultos": {
-                "potencial": 81.8,
-                "profissionalismo": 60.8,
-                "ego": 69.1,
-                "personalidade": "Estrela"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 68.1,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 10944,
-                "multa_rescisoria": 547200,
-                "meses_restantes": 24
+                "multa_rescisoria": 547200
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_033": {
             "id": "ply_033",
-            "team_id": "team_07",
             "nome": "Andrei 'Xshot' Toledo",
             "nickname": "Xshot",
             "idade": 24.5,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "team_07",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 68.0,
                 "gamesense": 59.4,
-                "clutch": 58.3
-            },
-            "ocultos": {
-                "potencial": 68.0,
-                "profissionalismo": 69.9,
-                "ego": 82.1,
-                "personalidade": "Temperamental"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 58.3,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 9283,
-                "multa_rescisoria": 464150,
-                "meses_restantes": 18
+                "multa_rescisoria": 464150
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_034": {
             "id": "ply_034",
-            "team_id": "team_07",
             "nome": "Mathias 'Cold' Rasmussen",
             "nickname": "Cold",
             "idade": 24.1,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "team_07",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 44.8,
                 "gamesense": 69.4,
-                "clutch": 58.6
-            },
-            "ocultos": {
-                "potencial": 68.5,
-                "profissionalismo": 57.1,
-                "ego": 38.8,
-                "personalidade": "Temperamental"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 58.6,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 8639,
-                "multa_rescisoria": 431950,
-                "meses_restantes": 21
+                "multa_rescisoria": 431950
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_035": {
             "id": "ply_035",
-            "team_id": "team_07",
             "nome": "Viktor 'Zking' Teslenko",
             "nickname": "Zking",
             "idade": 20.0,
-            "funcao": "Anchor",
+            "funcao_principal": "Rifler",
+            "team_id": "team_07",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 73.6,
                 "gamesense": 75.4,
-                "clutch": 67.1
-            },
-            "ocultos": {
-                "potencial": 74.4,
-                "profissionalismo": 80.2,
-                "ego": 42.4,
-                "personalidade": "Estrela"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 67.1,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 10806,
-                "multa_rescisoria": 540300,
-                "meses_restantes": 12
+                "multa_rescisoria": 540300
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_036": {
             "id": "ply_036",
-            "team_id": "team_08",
             "nome": "Nathan 'X' Herbaut",
             "nickname": "X",
             "idade": 23.7,
-            "funcao": "IGL",
+            "funcao_principal": "Rifler",
+            "team_id": "team_08",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 64.6,
                 "gamesense": 49.2,
-                "clutch": 67.2
-            },
-            "ocultos": {
-                "potencial": 69.9,
-                "profissionalismo": 56.9,
-                "ego": 38.5,
-                "personalidade": "Estrela"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 67.2,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 9050,
-                "multa_rescisoria": 452500,
-                "meses_restantes": 17
+                "multa_rescisoria": 452500
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_037": {
             "id": "ply_037",
-            "team_id": "team_08",
             "nome": "Robin 'Neoer' Johansson",
             "nickname": "Neoer",
             "idade": 24.1,
-            "funcao": "AWPer",
+            "funcao_principal": "Rifler",
+            "team_id": "team_08",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 57.6,
                 "gamesense": 71.8,
-                "clutch": 60.1
-            },
-            "ocultos": {
-                "potencial": 72.8,
-                "profissionalismo": 38.8,
-                "ego": 58.5,
-                "personalidade": "Profissional"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 60.1,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 9477,
-                "multa_rescisoria": 473850,
-                "meses_restantes": 6
+                "multa_rescisoria": 473850
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_038": {
             "id": "ply_038",
-            "team_id": "team_08",
             "nome": "Jake 'Coldzera' Cannella",
             "nickname": "Coldzera",
             "idade": 26.6,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "team_08",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 60.6,
                 "gamesense": 75.2,
-                "clutch": 69.1
-            },
-            "ocultos": {
-                "potencial": 77.9,
-                "profissionalismo": 79.3,
-                "ego": 61.1,
-                "personalidade": "Solitário"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 69.1,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 10241,
-                "multa_rescisoria": 512050,
-                "meses_restantes": 10
+                "multa_rescisoria": 512050
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_039": {
             "id": "ply_039",
-            "team_id": "team_08",
             "nome": "Jake 'Coldy' Cannella",
             "nickname": "Coldy",
             "idade": 27.5,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "team_08",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 70.8,
                 "gamesense": 52.7,
-                "clutch": 67.2
-            },
-            "ocultos": {
-                "potencial": 72.3,
-                "profissionalismo": 48.5,
-                "ego": 75.9,
-                "personalidade": "Estrela"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 67.2,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 9534,
-                "multa_rescisoria": 476700,
-                "meses_restantes": 15
+                "multa_rescisoria": 476700
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_040": {
             "id": "ply_040",
-            "team_id": "team_08",
             "nome": "Ludvig 'Neoer' Kajbjer",
             "nickname": "Neoer",
             "idade": 24.9,
-            "funcao": "Anchor",
+            "funcao_principal": "Rifler",
+            "team_id": "team_08",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 62.0,
                 "gamesense": 54.3,
-                "clutch": 65.0
+                "clutch": 65.0,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
-            "ocultos": {
-                "potencial": 77.5,
-                "profissionalismo": 61.0,
-                "ego": 80.1,
-                "personalidade": "Profissional"
+            "contrato": {
+                "salario": 9065,
+                "multa_rescisoria": 453250
             },
             "status": {
                 "moral": 80.0,
                 "fadiga": 0.0
-            },
-            "contrato": {
-                "salario": 9065,
-                "multa_rescisoria": 453250,
-                "meses_restantes": 7
             }
         },
-        {
+        "ply_041": {
             "id": "ply_041",
-            "team_id": "free_agent",
             "nome": "Mathieu 'Xy' Guipouy",
             "nickname": "Xy",
             "idade": 28.7,
-            "funcao": "AWPer",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 77.3,
                 "gamesense": 58.8,
-                "clutch": 63.1
-            },
-            "ocultos": {
-                "potencial": 77.5,
-                "profissionalismo": 85.6,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 63.1,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 9956,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_042": {
             "id": "ply_042",
-            "team_id": "free_agent",
             "nome": "Marcelo 'Xis' Costa",
             "nickname": "Xis",
             "idade": 20.2,
-            "funcao": "IGL",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 53.2,
                 "gamesense": 51.4,
-                "clutch": 37.4
-            },
-            "ocultos": {
-                "potencial": 58.6,
-                "profissionalismo": 75.3,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 37.4,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 7096,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_043": {
             "id": "ply_043",
-            "team_id": "free_agent",
             "nome": "Gabriel 'Darken' Toledo",
             "nickname": "Darken",
             "idade": 30.7,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 57.3,
                 "gamesense": 37.9,
-                "clutch": 33.3
-            },
-            "ocultos": {
-                "potencial": 59.4,
-                "profissionalismo": 71.1,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 33.3,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 6422,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_044": {
             "id": "ply_044",
-            "team_id": "free_agent",
             "nome": "Jake 'Z' Cannella",
             "nickname": "Z",
             "idade": 29.2,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 44.7,
                 "gamesense": 48.3,
-                "clutch": 38.3
-            },
-            "ocultos": {
-                "potencial": 50.7,
-                "profissionalismo": 83.2,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 38.3,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 6564,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_045": {
             "id": "ply_045",
-            "team_id": "free_agent",
             "nome": "Oleksandr 'Xx' Orudzhev",
             "nickname": "Xx",
             "idade": 29.3,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 51.2,
                 "gamesense": 64.9,
-                "clutch": 64.4
-            },
-            "ocultos": {
-                "potencial": 65.8,
-                "profissionalismo": 47.6,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 64.4,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 9021,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_046": {
             "id": "ply_046",
-            "team_id": "free_agent",
             "nome": "Fernando 'Snipis' Cerato",
             "nickname": "Snipis",
             "idade": 22.0,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 70.3,
                 "gamesense": 70.9,
-                "clutch": 39.7
-            },
-            "ocultos": {
-                "potencial": 70.3,
-                "profissionalismo": 66.4,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 39.7,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 9042,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_047": {
             "id": "ply_047",
-            "team_id": "free_agent",
             "nome": "Mathias 'Zerer' Rasmussen",
             "nickname": "Zerer",
             "idade": 19.4,
-            "funcao": "Anchor",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 50.2,
                 "gamesense": 32.5,
-                "clutch": 45.9
-            },
-            "ocultos": {
-                "potencial": 63.4,
-                "profissionalismo": 47.3,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 45.9,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 6429,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_048": {
             "id": "ply_048",
-            "team_id": "free_agent",
             "nome": "Lukas 'Neoy' Reedtz",
             "nickname": "Neoy",
             "idade": 20.5,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 54.6,
                 "gamesense": 48.9,
-                "clutch": 41.7
-            },
-            "ocultos": {
-                "potencial": 54.6,
-                "profissionalismo": 76.1,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 41.7,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 7258,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_049": {
             "id": "ply_049",
-            "team_id": "free_agent",
             "nome": "Cédric 'Xer' Herbaut",
             "nickname": "Xer",
             "idade": 30.6,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 56.3,
                 "gamesense": 53.9,
-                "clutch": 41.8
-            },
-            "ocultos": {
-                "potencial": 57.8,
-                "profissionalismo": 78.2,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 41.8,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 7594,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_050": {
             "id": "ply_050",
-            "team_id": "free_agent",
             "nome": "Freddy 'Coldshot' Wecksell",
             "nickname": "Coldshot",
             "idade": 24.3,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 80.3,
                 "gamesense": 54.9,
-                "clutch": 77.4
-            },
-            "ocultos": {
-                "potencial": 80.3,
-                "profissionalismo": 71.6,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 77.4,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 10631,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_051": {
             "id": "ply_051",
-            "team_id": "free_agent",
             "nome": "Jake 'Z' Cannella",
             "nickname": "Z",
             "idade": 19.3,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 62.2,
                 "gamesense": 48.0,
-                "clutch": 54.8
-            },
-            "ocultos": {
-                "potencial": 72.5,
-                "profissionalismo": 70.1,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 54.8,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 8244,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_052": {
             "id": "ply_052",
-            "team_id": "free_agent",
             "nome": "Marcelo 'Zy' Piovezan",
             "nickname": "Zy",
             "idade": 18.9,
-            "funcao": "IGL",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 51.3,
                 "gamesense": 70.7,
-                "clutch": 53.8
-            },
-            "ocultos": {
-                "potencial": 82.6,
-                "profissionalismo": 83.5,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 53.8,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 8790,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_053": {
             "id": "ply_053",
-            "team_id": "free_agent",
             "nome": "Viktor 'Zer' Osipov",
             "nickname": "Zer",
             "idade": 30.8,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 57.0,
                 "gamesense": 39.2,
-                "clutch": 50.7
-            },
-            "ocultos": {
-                "potencial": 57.8,
-                "profissionalismo": 64.6,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 50.7,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 7343,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_054": {
             "id": "ply_054",
-            "team_id": "free_agent",
             "nome": "Oleksandr 'Neozera' Osipov",
             "nickname": "Neozera",
             "idade": 23.8,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 74.3,
                 "gamesense": 62.7,
-                "clutch": 62.0
-            },
-            "ocultos": {
-                "potencial": 74.3,
-                "profissionalismo": 75.4,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 62.0,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 9951,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_055": {
             "id": "ply_055",
-            "team_id": "free_agent",
             "nome": "Mathieu 'God' Schrub",
             "nickname": "God",
             "idade": 23.4,
-            "funcao": "AWPer",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 60.6,
                 "gamesense": 56.8,
-                "clutch": 86.9
-            },
-            "ocultos": {
-                "potencial": 64.1,
-                "profissionalismo": 53.5,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 86.9,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 10219,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_056": {
             "id": "ply_056",
-            "team_id": "free_agent",
             "nome": "Oleksandr 'Zx' Vakhovskiy",
             "nickname": "Zx",
             "idade": 20.7,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 58.5,
                 "gamesense": 42.9,
-                "clutch": 64.2
-            },
-            "ocultos": {
-                "potencial": 59.7,
-                "profissionalismo": 56.8,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 64.2,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 8280,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_057": {
             "id": "ply_057",
-            "team_id": "free_agent",
             "nome": "Vincent 'Godshot' Jablonowski",
             "nickname": "Godshot",
             "idade": 31.4,
-            "funcao": "AWPer",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 80.4,
                 "gamesense": 62.7,
-                "clutch": 57.0
-            },
-            "ocultos": {
-                "potencial": 82.1,
-                "profissionalismo": 38.8,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 57.0,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 10003,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_058": {
             "id": "ply_058",
-            "team_id": "free_agent",
             "nome": "Mathieu 'Snip' Schrub",
             "nickname": "Snip",
             "idade": 31.6,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 48.1,
                 "gamesense": 68.1,
-                "clutch": 61.3
-            },
-            "ocultos": {
-                "potencial": 69.7,
-                "profissionalismo": 54.2,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 61.3,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 8876,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_059": {
             "id": "ply_059",
-            "team_id": "free_agent",
             "nome": "Dan 'Xy' Guipouy",
             "nickname": "Xy",
             "idade": 29.3,
-            "funcao": "Support",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 53.7,
                 "gamesense": 59.1,
-                "clutch": 54.7
-            },
-            "ocultos": {
-                "potencial": 61.2,
-                "profissionalismo": 61.2,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 54.7,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 8378,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_060": {
             "id": "ply_060",
-            "team_id": "free_agent",
             "nome": "Vincent 'Zen' Jablonowski",
             "nickname": "Zen",
             "idade": 23.9,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 49.2,
                 "gamesense": 35.9,
-                "clutch": 65.5
-            },
-            "ocultos": {
-                "potencial": 49.2,
-                "profissionalismo": 39.4,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 65.5,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 7527,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_061": {
             "id": "ply_061",
-            "team_id": "free_agent",
             "nome": "Freddy 'Xis' Brolin",
             "nickname": "Xis",
             "idade": 20.6,
-            "funcao": "Anchor",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 56.8,
                 "gamesense": 55.0,
-                "clutch": 72.7
-            },
-            "ocultos": {
-                "potencial": 64.3,
-                "profissionalismo": 67.2,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 72.7,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 9223,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_062": {
             "id": "ply_062",
-            "team_id": "free_agent",
             "nome": "Viktor 'Vis' Kostyliev",
             "nickname": "Vis",
             "idade": 17.6,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 53.1,
                 "gamesense": 42.8,
-                "clutch": 43.7
-            },
-            "ocultos": {
-                "potencial": 79.2,
-                "profissionalismo": 64.0,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 43.7,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 6983,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_063": {
             "id": "ply_063",
-            "team_id": "free_agent",
             "nome": "Andrei 'Ven' Cerato",
             "nickname": "Ven",
             "idade": 19.6,
-            "funcao": "AWPer",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 60.7,
                 "gamesense": 43.6,
-                "clutch": 44.4
-            },
-            "ocultos": {
-                "potencial": 63.8,
-                "profissionalismo": 57.0,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 44.4,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 7432,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_064": {
             "id": "ply_064",
-            "team_id": "free_agent",
             "nome": "Yuri 'Zeris' Santos",
             "nickname": "Zeris",
             "idade": 23.7,
-            "funcao": "Anchor",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 50.6,
                 "gamesense": 53.0,
-                "clutch": 77.7
-            },
-            "ocultos": {
-                "potencial": 70.6,
-                "profissionalismo": 66.5,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 77.7,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 9065,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_065": {
             "id": "ply_065",
-            "team_id": "free_agent",
             "nome": "Timothy 'God1' Van Dulken",
             "nickname": "God1",
             "idade": 23.9,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 69.1,
                 "gamesense": 75.0,
-                "clutch": 59.1
-            },
-            "ocultos": {
-                "potencial": 69.2,
-                "profissionalismo": 66.6,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 59.1,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 10155,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_066": {
             "id": "ply_066",
-            "team_id": "free_agent",
             "nome": "Marcelo 'Xis' Piovezan",
             "nickname": "Xis",
             "idade": 18.2,
-            "funcao": "IGL",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 40.7,
                 "gamesense": 60.5,
-                "clutch": 52.8
-            },
-            "ocultos": {
-                "potencial": 65.4,
-                "profissionalismo": 81.0,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 52.8,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 7702,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_067": {
             "id": "ply_067",
-            "team_id": "free_agent",
             "nome": "Danylo 'Zerzera' Teslenko",
             "nickname": "Zerzera",
             "idade": 16.5,
-            "funcao": "IGL",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 48.1,
                 "gamesense": 60.2,
-                "clutch": 29.7
-            },
-            "ocultos": {
-                "potencial": 72.9,
-                "profissionalismo": 71.1,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 29.7,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 6902,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_068": {
             "id": "ply_068",
-            "team_id": "free_agent",
             "nome": "Emil 'Xer' Reedtz",
             "nickname": "Xer",
             "idade": 30.7,
-            "funcao": "Entry",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 53.4,
                 "gamesense": 46.1,
-                "clutch": 45.2
-            },
-            "ocultos": {
-                "potencial": 55.2,
-                "profissionalismo": 35.5,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 45.2,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 7233,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         },
-        {
+        "ply_069": {
             "id": "ply_069",
-            "team_id": "free_agent",
             "nome": "Mathias 'Zerzera' Rasmussen",
             "nickname": "Zerzera",
             "idade": 30.2,
-            "funcao": "IGL",
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
             "atributos": {
                 "mira": 57.4,
                 "gamesense": 82.2,
-                "clutch": 27.5
-            },
-            "ocultos": {
-                "potencial": 84.6,
-                "profissionalismo": 77.5,
-                "ego": 50,
-                "personalidade": "Neutro"
-            },
-            "status": {
-                "moral": 80.0,
-                "fadiga": 0.0
+                "clutch": 27.5,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 8355,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
-            }
-        },
-        {
-            "id": "ply_070",
-            "team_id": "free_agent",
-            "nome": "Marcelo 'Neozera' Toledo",
-            "nickname": "Neozera",
-            "idade": 28.3,
-            "funcao": "Entry",
-            "atributos": {
-                "mira": 70.6,
-                "gamesense": 68.8,
-                "clutch": 69.5
-            },
-            "ocultos": {
-                "potencial": 71.9,
-                "profissionalismo": 77.3,
-                "ego": 50,
-                "personalidade": "Neutro"
+                "multa_rescisoria": 0
             },
             "status": {
                 "moral": 80.0,
                 "fadiga": 0.0
+            }
+        },
+        "ply_070": {
+            "id": "ply_070",
+            "nome": "Marcelo 'Neozera' Toledo",
+            "nickname": "Neozera",
+            "idade": 28.3,
+            "funcao_principal": "Rifler",
+            "team_id": "free_agent",
+            "personalidade": "Neutro",
+            "atributos": {
+                "mira": 70.6,
+                "gamesense": 68.8,
+                "clutch": 69.5,
+                "potencial": 70.0,
+                "profissionalismo": 50.0,
+                "ego": 50.0
             },
             "contrato": {
                 "salario": 10445,
-                "multa_rescisoria": 0,
-                "meses_restantes": 0
+                "multa_rescisoria": 0
+            },
+            "status": {
+                "moral": 80.0,
+                "fadiga": 0.0
             }
         }
-    ]
+    }
 }
